@@ -1,0 +1,1159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>  
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JUST PLAY SAFE ESPORTS - PUBG Mobile Clan</title>
+    <link href="https://fonts.googleapis.com/css2?family=Wallpoet&display=swap" rel="stylesheet">
+    <style>
+* {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        :root {
+            --primary-black: #0A0A0A;
+            --secondary-black: #121212;
+            --deep-black: #050505;
+            --primary-yellow: #FFD700;
+            --bright-yellow: #FFFF00;
+            --metallic-silver: #C0C0C0;
+            --chrome-silver: #E5E5E5;
+            --neon-yellow: #FFEB3B;
+            --primary-white: #FFFFFF;
+            --dark-gray: #2A2A2A;
+            --glow-yellow: rgba(255, 215, 0, 0.3);
+            --metal-texture: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><rect width="100" height="100" fill="%23121212"/><path d="M0,0 L100,100 M100,0 L0,100" stroke="%23222" stroke-width="1"/></svg>');
+        }
+        body {
+            background-color: var(--primary-black);
+            color: var(--primary-white);
+            line-height: 1.6;
+        overflow-x: hidden;
+        background-image: linear-gradient(45 var(--deep-black) 25%, var(--secondary-black) 25%, var(--secondary-black) 50%, var(--deep-black) 50%, var(--deep-black) 75%, var(--secondary-black) 75%, var(--secondary-black));
+            background-size: 10px 10px;
+        }
+
+        /* Navigation */
+        nav {
+            background: linear-gradient(90deg, var(--secondary-black), var(--deep-black));
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 2px solid var(--primary-yellow);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+        }
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 2rem;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        .logo-img {
+            width: clamp(3rem, 5vw, 5rem);
+            height: clamp(3rem, 5vw, 5rem);
+            background: url('data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Ccircle cx=%2250%22 cy=%2250%22 r=%2245%22 fill=%22%23121212%22/%3E%3Cpath d=%22M30,50 L50,30 L70,50 L50,70 Z%22 fill=%22%23FFD700%22/%3E%3C/svg%3E') no-repeat center;
+            background-size: contain;
+            border: 2px solid var(--primary-yellow);
+            border-radius: 50%;
+        }
+
+        .logo-img-responsive {
+            width: clamp(3rem, 5vw, 5rem);
+            height: clamp(3rem, 5vw, 5rem);
+            max-width: 100%;
+            height: auto;
+            border: 2px solid var(--primary-yellow);
+            border-radius: 50%;
+        }
+
+        .logo-text {
+            font-family: 'Wallpoet', cursive;
+            font-size: clamp(1rem, 2vw, 1.5rem);
+            font-weight: bold;
+            background: linear-gradient(45deg, var(--primary-yellow), var(--metallic-silver), var(--chrome-silver), var(--primary-yellow));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-shadow: 0 0 5px var(--glow-yellow);
+        }
+          .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: var(--primary-white);
+            text-decoration: none;
+            transition: all 0.3s ease;
+            font-weight: 500;
+            position: relative;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+        }
+
+         .nav-links a:hover {
+            color: var(--primary-yellow);
+            transform: translateY(-2px);
+            text-shadow: 0 0 5px var(--glow-yellow);
+        }
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            background: var(--primary-yellow);
+            left: 50%;
+            bottom: 0;
+            transition: all 0.3s ease;
+            border-radius: 2px;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+            left: 0;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%221200%22 height=%22600%22%3E%3Crect width=%221200%22 height=%22600%22 fill=%22%230A0A0A%22/%3E%3Cpolygon fill=%22%23121212%22 points=%220,600 1200,600 1200,500%22/%3E%3Cpolygon fill=%22%23FFD700%22 opacity=%220.1%22 points=%220,0 1200,0 1200,100%22/%3E%3C/svg%3E');
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+          .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at 30% 30%, rgba(255, 215, 0, 0.1) 0%, transparent 20%),
+                       radial-gradient(circle at 70% 70%, rgba(255, 215, 0, 0.1) 0%, transparent 20%);
+            pointer-events: none;
+        }
+
+         .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 800px;
+            padding: 2rem;
+        }
+
+        .hero-content h1 {
+            font-family: 'Wallpoet', cursive;
+            font-size: clamp(2rem, 8vw, 4rem);
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            background: linear-gradient(135deg, var(--bright-yellow) 0%, var(--primary-yellow) 25%, var(--metallic-silver) 50%, var(--chrome-silver) 75%, var(--primary-yellow) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-shadow: 0 0 10px var(--glow-yellow);
+            animation: pulse 2s infinite alternate;
+        }
+
+        @keyframes pulse {
+            from { text-shadow: 0 0 5px var(--glow-yellow); }
+            to { text-shadow: 0 0 20px var(--glow-yellow); }
+        }
+
+        .hero-content p {
+            font-size: clamp(1rem, 3vw, 1.5rem);
+            margin-bottom: 2rem;
+            color: var(--metallic-silver);
+            text-shadow: 0 0 5px rgba(192, 192, 192, 0.5);
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 1rem 2rem;
+            background: linear-gradient(45deg, var(--primary-yellow), var(--bright-yellow));
+            color: var(--primary-black);
+            text-decoration: none;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(255, 215, 0, 0.4);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, var(--metallic-silver), var(--chrome-silver));
+            transition: left 0.5s ease;
+        }
+
+        .cta-button:hover::before {
+            left: 0;
+        }
+
+        .cta-button:hover {
+            background: linear-gradient(45deg, var(--bright-yellow), var(--primary-yellow));
+            transform: translateY(-2px) scale(1.05);
+            box-shadow: 0 10px 25px rgba(255, 215, 0, 0.6);
+        }
+
+        /* Recruitment Section */
+        .recruitment {
+            padding: 5rem 2rem;
+            background: linear-gradient(to bottom, var(--secondary-black), var(--deep-black));
+            position: relative;
+            overflow: hidden;
+        }
+
+        .recruitment::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 50%;
+            background: linear-gradient(to bottom, rgba(255, 215, 0, 0.05), transparent);
+        }
+
+        .recruitment-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .recruitment-image {
+            position: relative;
+            border-radius: 10px;
+            overflow: hidden;
+            transition: transform 0.5s ease;
+            margin-left: auto;
+        }
+
+        .recruitment-image:hover {
+            transform: scale(1.02);
+        }
+
+        .recruitment-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .recruitment-text {
+            color: var(--metallic-silver);
+            line-height: 1.8;
+        }
+
+        .recruitment-text h3 {
+            color: var(--primary-yellow);
+            margin-bottom: 1rem;
+            font-size: clamp(1.1rem, 3vw, 1.5rem);
+            text-shadow: 0 0 5px var(--glow-yellow);
+        }
+
+        .recruitment-text p {
+            margin-bottom: 1rem;
+        }
+
+        .recruitment-btn {
+            display: inline-block;
+            margin-top: 1rem;
+            padding: 0.8rem 1.5rem;
+            background: linear-gradient(45deg, var(--primary-yellow), var(--bright-yellow));
+            color: var(--primary-black);
+            text-decoration: none;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(255, 215, 0, 0.4);
+        }
+
+        .recruitment-btn:hover {
+            background: linear-gradient(45deg, var(--bright-yellow), var(--primary-yellow));
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(255, 215, 0, 0.6);
+        }
+
+        /* About Section */
+        .about {
+            padding: 5rem 2rem;
+            background: linear-gradient(to bottom, var(--deep-black), var(--secondary-black));
+        }
+
+        .section-title {
+            font-size: clamp(1.5rem, 6vw, 3rem);
+            text-align: center;
+            margin-bottom: 3rem;
+            color: var(--primary-yellow);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-shadow: 0 0 10px var(--glow-yellow);
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 3px;
+            background: var(--primary-yellow);
+            border-radius: 2px;
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+            justify-items: center;
+        }
+
+        .about-images {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+            justify-content: center;
+            perspective: 1000px;
+        }
+
+        .about-images img {
+            width: 100%;
+            height: auto;
+            border: 3px solid var(--primary-yellow);
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(255, 215, 0, 0.3);
+            animation: imageCrossfade 10s infinite ease-in-out;
+            position: absolute;
+            max-width: 100%;
+        }
+
+        .about-images img:nth-child(1) {
+            animation-delay: 0s;
+        }
+
+        .about-images img:nth-child(2) {
+            animation-delay: 5s;
+        }
+
+        .about-images {
+            position: relative;
+            width: clamp(10rem, 25vw, 220px);
+            height: clamp(10rem, 25vw, 220px);
+        }
+
+        @keyframes imageCrossfade {
+            0% {
+                opacity: 1;
+            }
+            45% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0;
+            }
+            95% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        .about-text {
+            color: var(--metallic-silver);
+            line-height: 1.8;
+        }
+
+        .about-text h3 {
+            font-family: 'Wallpoet', cursive;
+            background: linear-gradient(45deg, var(--bright-yellow), var(--primary-yellow), var(--metallic-silver), var(--primary-yellow));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 1rem;
+            font-size: clamp(1.1rem, 3vw, 1.5rem);
+            text-shadow: 0 0 5px var(--glow-yellow);
+        }
+
+        .about-text p {
+            margin-bottom: 1rem;
+        }
+
+        /* Team Section */
+        .team {
+            padding: 5rem 2rem;
+            background: linear-gradient(to bottom, var(--secondary-black), var(--deep-black));
+        }
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .team-member img {
+            width: 200px;
+            height: 200px;
+            border: 3px solid var(--primary-yellow);
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(255, 215, 0, 0.3);
+            margin: 0 auto 1rem;
+            display: block;
+            object-fit: cover;
+        }
+
+        .recruitment-image img {
+            width: 100%;
+            height: auto;
+            max-width: 400px;
+            border: 3px solid var(--primary-yellow);
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(255, 215, 0, 0.3);
+            display: block;
+        }
+
+        .team-member {
+            background: linear-gradient(135deg, var(--secondary-black), var(--deep-black));
+            border: 2px solid var(--primary-yellow);
+            border-radius: 10px;
+            padding: 2rem;
+            text-align: center;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+        }
+
+        .team-member::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background: linear-gradient(90deg, var(--primary-yellow), var(--bright-yellow));
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .team-member:hover::before {
+            opacity: 1;
+        }
+
+        .team-member:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(255, 215, 0, 0.3);
+        }
+
+        .player-avatar {
+            width: clamp(5rem, 15vw, 120px);
+            height: clamp(5rem, 15vw, 120px);
+            background: linear-gradient(45deg, var(--primary-yellow), var(--metallic-silver));
+            border-radius: 50%;
+            margin: 0 auto 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            color: var(--primary-black);
+            font-weight: bold;
+            border: 3px solid var(--primary-yellow);
+            box-shadow: 0 0 15px var(--glow-yellow);
+        }
+
+        .player-name {
+            color: var(--primary-yellow);
+            font-size: clamp(1rem, 2.5vw, 1.3rem);
+            margin-bottom: 0.5rem;
+            text-shadow: 0 0 5px var(--glow-yellow);
+        }
+
+        .player-role {
+            color: var(--metallic-silver);
+            font-size: clamp(0.75rem, 2vw, 0.9rem);
+        }
+
+        /* Achievements Section */
+        .achievements {
+            padding: 5rem 2rem;
+            background: linear-gradient(to bottom, var(--deep-black), var(--secondary-black));
+        }
+
+        .achievements-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .achievement-card {
+            background: linear-gradient(135deg, var(--secondary-black), var(--deep-black));
+            border: 1px solid var(--primary-yellow);
+            border-radius: 10px;
+            padding: 2rem;
+            text-align: center;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+        }
+
+        .achievement-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--primary-yellow), var(--bright-yellow));
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .achievement-card:hover::before {
+            opacity: 1;
+        }
+
+        .achievement-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(255, 215, 0, 0.3);
+        }
+
+        .achievement-icon {
+            font-size: 3rem;
+            color: var(--primary-yellow);
+            margin-bottom: 1rem;
+            text-shadow: 0 0 10px var(--glow-yellow);
+        }
+
+        .achievement-title {
+            color: var(--primary-yellow);
+            font-size: clamp(1rem, 2.5vw, 1.3rem);
+            margin-bottom: 0.5rem;
+            text-shadow: 0 0 5px var(--glow-yellow);
+        }
+
+        .achievement-desc {
+            color: var(--metallic-silver);
+        }
+
+        /* Contact Section */
+        .contact {
+            padding: 5rem 2rem;
+            background: linear-gradient(to bottom, var(--secondary-black), var(--deep-black));
+        }
+
+        .contact-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: start;
+        }
+
+        .contact-info {
+            color: var(--metallic-silver);
+        }
+
+        .contact-info h3 {
+            color: var(--primary-yellow);
+            margin-bottom: 1rem;
+            text-shadow: 0 0 5px var(--glow-yellow);
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .social-links a {
+            display: inline-block;
+            width: clamp(2.5rem, 6vw, 50px);
+            height: clamp(2.5rem, 6vw, 50px);
+            background: linear-gradient(45deg, var(--primary-yellow), var(--bright-yellow));
+            color: var(--primary-black);
+            text-align: center;
+            line-height: clamp(2.5rem, 6vw, 50px);
+            border-radius: 50%;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            box-shadow: 0 0 10px var(--glow-yellow);
+        }
+
+        .social-links a:hover {
+            transform: scale(1.1) rotate(15deg);
+            background: linear-gradient(45deg, var(--bright-yellow), var(--primary-yellow));
+            box-shadow: 0 0 20px var(--glow-yellow);
+        }
+
+        .contact-form {
+            background: linear-gradient(135deg, var(--secondary-black), var(--deep-black));
+            padding: 2rem;
+            border-radius: 10px;
+            border: 1px solid var(--primary-yellow);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            color: var(--primary-yellow);
+            margin-bottom: 0.5rem;
+            text-shadow: 0 0 5px var(--glow-yellow);
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.8rem;
+            background: var(--secondary-black);
+            border: 1px solid var(--metallic-silver);
+            border-radius: 5px;
+            color: var(--primary-white);
+            transition: all 0.3s ease;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--primary-yellow);
+            box-shadow: 0 0 10px var(--glow-yellow);
+        }
+
+        .submit-btn {
+            background: linear-gradient(45deg, var(--primary-yellow), var(--bright-yellow));
+            color: var(--primary-black);
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 5px;
+            font-weight: bold;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(255, 215, 0, 0.4);
+        }
+
+        .submit-btn:hover {
+            background: linear-gradient(45deg, var(--bright-yellow), var(--primary-yellow));
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(255, 215, 0, 0.6);
+        }
+
+        /* Footer */
+        footer {
+            background: linear-gradient(135deg, var(--secondary-black), var(--deep-black));
+            padding: 2rem;
+            text-align: center;
+            border-top: 2px solid var(--primary-yellow);
+            box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.5);
+        }
+
+        .footer-content {
+            color: var(--metallic-silver);
+        }
+
+        .footer-content a {
+            color: var(--primary-yellow);
+            text-decoration: none;
+            text-shadow: 0 0 5px var(--glow-yellow);
+        }
+
+        .footer-content a:hover {
+            text-shadow: 0 0 10px var(--glow-yellow);
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero-content p {
+                font-size: 1.2rem;
+            }
+
+            .about-content,
+            .contact-content {
+                grid-template-columns: 1fr;
+            }
+
+            .about-images {
+                flex-direction: column;
+                gap: 1.5rem;
+            }
+
+            .team-grid,
+            .achievements-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .recruitment-content {
+                grid-template-columns: 1fr;
+            }
+
+            .section-title {
+                font-size: 2.5rem;
+            }
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-in-up {
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        /* Scrollbar Styling */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: var(--primary-black);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: linear-gradient(45deg, var(--primary-yellow), var(--metallic-silver));
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: linear-gradient(45deg, var(--bright-yellow), var(--primary-yellow));
+        }
+
+        /* Metalic Effect */
+        .metallic {
+            background: linear-gradient(45deg, var(--metallic-silver), var(--chrome-silver));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-shadow: 0 0 5px rgba(192, 192, 192, 0.5);
+        }
+
+        .metallic-bg {
+            background: linear-gradient(45deg, var(--metallic-silver), var(--chrome-silver));
+            padding: 1rem;
+            border-radius: 5px;
+            color: var(--primary-black);
+            font-weight: bold;
+        }
+
+        /* Glowing Effect */
+        .glow {
+            text-shadow: 0 0 5px var(--glow-yellow);
+            transition: text-shadow 0.3s ease;
+        }
+
+        .glow:hover {
+            text-shadow: 0 0 15px var(--glow-yellow);
+        }
+
+        /* Holographic Effect */
+        .holographic {
+            position: relative;
+            display: inline-block;
+            color: var(--primary-yellow);
+            text-shadow: 0 0 5px var(--glow-yellow);
+            animation: holographic 3s infinite alternate;
+        }
+
+        @keyframes holographic {
+            0% { text-shadow: 0 0 5px var(--glow-yellow); }
+            100% { text-shadow: 0 0 20px var(--glow-yellow), 0 0 30px var(--primary-yellow); }
+        }
+
+        /* Success Message */
+        .success-message {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: linear-gradient(135deg, var(--secondary-black), var(--deep-black));
+            border: 2px solid var(--primary-yellow);
+            border-radius: 10px;
+            padding: 3rem 2rem;
+            text-align: center;
+            z-index: 2000;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.8), 0 0 30px rgba(255, 215, 0, 0.4);
+            animation: slideIn 0.5s ease-out;
+            max-width: 400px;
+        }
+
+        .success-message.show {
+            display: block;
+        }
+
+        .success-message h2 {
+            color: var(--primary-yellow);
+            font-family: 'Wallpoet', cursive;
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            text-shadow: 0 0 10px var(--glow-yellow);
+        }
+
+        .success-message p {
+            color: var(--metallic-silver);
+            margin-bottom: 1rem;
+            line-height: 1.6;
+        }
+
+        .success-message .checkmark {
+            font-size: 3rem;
+            color: var(--primary-yellow);
+            margin-bottom: 1rem;
+            animation: pulse 1s infinite;
+        }
+
+        .success-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            z-index: 1999;
+        }
+
+        .success-overlay.show {
+            display: block;
+        }
+
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translate(-50%, -60%);
+            }
+            to {
+                opacity: 1;
+                transform: translate(-50%, -50%);
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <div class="logo">
+                <img src="img/ESPORTS-removebg-preview.png" alt="JPS Logo" class="logo-img-responsive">
+                <a href="#home" class="logo-text">JPS ESPORTS</a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#recruitment">Recruit</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#team">Team</a></li>
+                <li><a href="#achievements">Achievements</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content fade-in-up">
+            <h1 class="holographic">Just Play Safe</h1>
+            <p>Professional PUBG Mobile Esports Team</p>
+            <a href="#recruitment" class="cta-button">Join Our Roster</a>
+        </div>
+    </section>
+
+    <!-- Recruitment Section -->
+    <section id="recruitment" class="recruitment">
+        <div class="container">
+            <h2 class="section-title">Recruitment Drive</h2>
+            <div class="recruitment-content">
+                <div class="recruitment-image">
+                    <img src="img/recruitpost.jpg" style="display: block; width: 100%; height: auto; max-width: 520px;" alt="Join Just Play Safe Esports">
+                </div>
+                <div class="recruitment-text">
+                    <h3>We're Looking For Talented Players!</h3>
+                    <p>Just Play Safe Esports is currently recruiting both casual and competitive players for our PUBG Mobile team. Whether you're looking to compete in tournaments or just want to play with a great community, we have a spot for you.</p>
+                    <p>Our team offers:</p>
+                    <ul style="margin-left: 2rem; margin-bottom: 1rem;">
+                        <li>Structured training sessions</li>
+                        <li>Competitive tournament opportunities</li>
+                        <li>Official team jerseys</li>
+                        <li>Community events and social activities</li>
+                        <li>Pathway to professional esports</li>
+                    </ul>
+                    <p>Apply now to join our growing esports family!</p>
+                    <a href="#contact" class="recruitment-btn">Apply Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">About Us</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>JUST PLAY SAFE ESPORTS</h3>
+                    <p>We are a esports organization dedicated to excellence in PUBG Mobile competitive gaming. Founded with the vision of creating a sustainable and competitive gaming environment, we strive to be at the forefront of mobile esports.</p>
+                    <br>
+                    <p>Our team consists of talented players who share a common goal - to compete at the highest level and represent our organization with pride and professionalism. We believe in fair play, strategic gameplay, and continuous improvement.</p>
+                    <br>
+                    <p>Our futuristic approach combines cutting-edge technology with traditional esports values to create a unique gaming experience for our players and fans alike.</p>
+                </div>
+                <div class="about-images">
+                    <img src="img/received_1168243292061280.jpeg" style="width: 100%; height: auto; max-width: 100%;" alt="About Just Play Safe Esports">
+                    <img src="img/jersey.jpg" style="width: 100%; height: auto; max-width: 100%;" alt="JPS Jersey">
+                </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section id="team" class="team">
+        <div class="container">
+            <h2 class="section-title">Our Leaders and Admin</h2>
+            <div class="team-grid">
+                <div class="team-member">
+                    <img src="img/Boss.jpg" alt="JPSxSAYMMT">
+                    <h3 class="player-name">JPSxSAYMMT</h3>
+                    <p class="player-role">LEADER</p>
+                </div>
+                <div class="team-member">
+                   <img src="img/Kap.jpg" alt="JPSechoxMT">
+                    <h3 class="player-name">JPSechoxMT</h3>
+                    <p class="player-role">CO-LEADER</p>
+                </div>
+                <div class="team-member">
+                    <img src="img/MG.jpg" alt="JPSxGrAciAa">
+                    <h3 class="player-name">JPSxGrAciAa</h3>
+                    <p class="player-role">CO-LEADER</p>
+                </div>
+                <div class="team-member">
+                    <img src="img/07eeb059af86376f4c476bea3429d622.jpg" alt="JPSrobin677"> 
+                    <h3 class="player-name">JPSrobin677</h3>
+                    <p class="player-role">ADMIN</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Achievements Section -->
+    <section id="achievements" class="achievements">
+        <div class="container">
+            <h2 class="section-title">Achievements</h2>
+            <div class="achievements-grid">
+                <div class="achievement-card">
+                    <div class="achievement-icon">🏆</div>
+                    <h3 class="achievement-title">Championship Title</h3>
+                    <p class="achievement-desc">Winner of Regional PUBG Mobile Tournament 2024</p>
+                </div>
+                <div class="achievement-card">
+                    <div class="achievement-icon">🎯</div>
+                    <h3 class="achievement-title">Top 10 Global</h3>
+                    <p class="achievement-desc">Consistent top 10 finishes in international competitions</p>
+                </div>
+                <div class="achievement-card">
+                    <div class="achievement-icon">⚡</div>
+                    <h3 class="achievement-title">Rising Stars</h3>
+                    <p class="achievement-desc">Fastest growing PUBG Mobile team in the region</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Connect With Us</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Get In Touch</h3>
+                    <p>Interested in partnering with us or want to know more about our team? Feel free to reach out through any of our social media channels or use the contact form.</p>
+                    <br>
+                    <p><strong>Email:</strong> contact@justplaysafeesports.com</p>
+                    <p><strong>Facebook:</strong> Just Play Safe Esports</p>
+                    <br>
+                    <h3>Follow Us</h3>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/profile.php?id=61555670961740" target="_blank"><svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor" style="display: block;"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
+                    </div>
+                </div>
+                <form class="contact-form" action="https://formspree.io/f/xgoowera" method="POST">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Success Message -->
+    <div class="success-overlay"></div>
+    <div class="success-message">
+        <div class="checkmark">✓</div>
+        <h2>Message Sent!</h2>
+        <p>Thank you for reaching out! We'll get back to you as soon as possible.</p>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2023 Just Play Safe Esports. All rights reserved.</p>
+            <p>PUBG Mobile Team | <a href="https://www.facebook.com/profile.php?id=61555670961740" target="_blank">Follow us on Facebook</a></p>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Add fade-in animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in-up');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.team-member, .achievement-card').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Form submission with Formspree
+        document.querySelector('.contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const form = this;
+            
+            // Send form data to Formspree
+            fetch('https://formspree.io/f/xgoowera', {
+                method: 'POST',
+                body: new FormData(form),
+                headers: {
+                    'Accept': 'application/json'
+                }
+            }).then(response => {
+                if (response.ok) {
+                    // Show success message
+                    document.querySelector('.success-overlay').classList.add('show');
+                    document.querySelector('.success-message').classList.add('show');
+                    
+                    // Reset form
+                    form.reset();
+                    
+                    // Hide message after 4 seconds
+                    setTimeout(() => {
+                        document.querySelector('.success-overlay').classList.remove('show');
+                        document.querySelector('.success-message').classList.remove('show');
+                    }, 4000);
+                }
+            }).catch(error => {
+                alert('Error sending message. Please try again.');
+            });
+        });
+
+        // Navigation background on scroll
+        window.addEventListener('scroll', function() {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 100) {
+                nav.style.backgroundColor = 'rgba(18, 18, 18, 0.95)';
+                nav.style.backdropFilter = 'blur(10px)';
+            } else {
+                nav.style.backgroundColor = 'linear-gradient(90deg, var(--secondary-black), var(--deep-black))';
+                nav.style.backdropFilter = 'none';
+            }
+        });
+
+        // Add hover effects to elements
+        document.querySelectorAll('.team-member, .achievement-card').forEach(element => {
+            element.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-5px)';
+                this.style.boxShadow = '0 10px 30px rgba(255, 215, 0, 0.3)';
+            });
+            
+            element.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0)';
+                this.style.boxShadow = '0 5px 15px rgba(0, 0, 0, 0.5)';
+            });
+        }); 
+    </script>
+</body>
+</html>
